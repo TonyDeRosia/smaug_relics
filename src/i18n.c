@@ -50,6 +50,8 @@
 
 #include "mud.h"
 
+const char *SMAUGlocale = NULL;
+
 void fread_locale args((LOCALE_DATA * locale, FILE * fp));
 bool load_locales_file args((char * localesfile));
 
