@@ -341,11 +341,36 @@ This is a list of TODO stuff:
 
 #### Supported Operating Systems
 
-	- Linux
-	- BSD
-	- Solaris
-	- Windows (CYGWIN)
-	- MAC
+        - Linux
+        - BSD
+        - Solaris
+        - Windows (CYGWIN)
+        - MAC
+
+### Prerequisites
+
+These tools are required to bootstrap and configure the build system:
+
+        - intltool
+        - file
+        - autoconf
+        - automake
+        - libtool
+        - pkg-config
+
+On Debian based systems you may install them with:
+
+```bash
+apt-get install autoconf automake libtool pkg-config intltool file
+```
+
+### Building
+
+Compile and install the MUD server with the usual autotools workflow:
+
+```bash
+./autogen.sh && ./configure && make && make install
+```
 
 
 ### Authors and Contributors
