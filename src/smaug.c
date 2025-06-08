@@ -1896,7 +1896,7 @@ nanny (DESCRIPTOR_DATA * d, char *argument)
       if (chk == TRUE)
 	return;
 
-      sprintf (buf, ch->pcdata->filename);
+      snprintf(buf, sizeof(buf), "%s", ch->pcdata->filename);
       d->character->desc = NULL;
       free_char (d->character);
       d->character = NULL;
