@@ -77,5 +77,5 @@ struct locale_data
 const char *SMAUGlocale;
 
 int i18n_setlocale (void);
-int i18n_getlocale (void);
+void i18n_getlocale (void);
 

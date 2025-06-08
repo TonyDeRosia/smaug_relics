@@ -56,10 +56,10 @@ void fread_locale args((LOCALE_DATA * locale, FILE * fp));
 bool load_locales_file args((char * localesfile));
 
 /* Get server locale from env LANG */
-int
+void
 i18n_getlocale (void)
 {
-	SMAUGlocale = getenv("LANG");
+        SMAUGlocale = getenv("LANG");
 }
 
 /* Set server locale */
