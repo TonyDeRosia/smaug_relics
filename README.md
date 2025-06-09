@@ -372,6 +372,32 @@ Compile and install the MUD server with the usual autotools workflow:
 ./autogen.sh && ./configure && make && make install
 ```
 
+### Running
+
+Start the daemon after installation using the provided init script:
+
+```bash
+sudo /usr/local/etc/init.d/smaugd start
+```
+
+Stop it with:
+
+```bash
+sudo /usr/local/etc/init.d/smaugd stop
+```
+
+### Quickstart with Docker
+
+You can also build and run the server in a container without installing
+anything locally:
+
+```bash
+docker build -t smaug .
+docker run -it -p 4000:4000 smaug
+```
+
+The container starts the daemon and streams its log to the console.
+
 
 ### Authors and Contributors
 
