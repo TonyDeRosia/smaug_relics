@@ -91,3 +91,6 @@ The license terms boil down to this: the people who wrote this mud want due cred
 ==============
 
 _**--{SMAUG}--** (c) 2014-2015 Antonio Cao (@burzumishi)_
+
+### Node Usage
+Run `run-relics` to launch the Node-based server.

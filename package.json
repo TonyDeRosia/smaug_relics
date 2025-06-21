@@ -1,0 +1,19 @@
+{
+  "name": "smaug-relics",
+  "version": "1.0.0",
+  "description": "Node.js rewrite of the SMAUG MUD engine",
+  "main": "src/server.js",
+  "bin": {
+    "run-relics": "bin/run-relics.js",
+    "relics-monitor": "bin/monitor.js"
+  },
+  "scripts": {
+    "start": "node bin/run-relics.js",
+    "test": "echo \"No tests defined\""
+  },
+  "author": "",
+  "license": "GPL-2.0",
+  "dependencies": {
+    "ws": "^8.13.0"
+  }
+}
