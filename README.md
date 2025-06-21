@@ -466,3 +466,16 @@ enhancements to **SMAUG**.  These enhancements are copyright 2014-2015 by
 ==============
 
 _**--{SMAUG II}--** (c) 2014-2015 Antonio Cao (@burzumishi)_
+
+## Node.js Port
+
+This repository now includes a minimal Node.js implementation of the Relics server.
+To run it you need Node.js v18 or later. After cloning run:
+
+```bash
+npm install
+run-relics
+```
+
+To install the command globally run `npm link` inside the project.
+This starts both telnet and websocket servers. The code resides in `src/server.js`.

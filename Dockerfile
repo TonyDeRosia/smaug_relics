@@ -1,22 +1,14 @@
 FROM ubuntu:22.04
 
-# Install build dependencies
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-        build-essential autoconf automake libtool pkg-config intltool file \
-        git ca-certificates && \
+    apt-get install -y curl && \
+    curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+    apt-get install -y nodejs && \
     rm -rf /var/lib/apt/lists/*
 
-# Copy source
-WORKDIR /opt/smaug
-COPY . /opt/smaug
+WORKDIR /opt/relics
+COPY . /opt/relics
+RUN npm install --production
 
-# Build and install
-RUN ./autogen.sh && \
-    ./configure && \
-    make && \
-    make install
-
-EXPOSE 4000
-
-CMD ["/bin/bash", "-c", "/usr/local/etc/init.d/smaugd start && tail -F /usr/local/var/log/smaug/smaug.log"]
+EXPOSE 4000 8080
+CMD ["node", "bin/run-relics.js"]
